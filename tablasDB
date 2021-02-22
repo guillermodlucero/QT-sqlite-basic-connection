@@ -1,0 +1,55 @@
+base de datos: boxDB.db
+
+CREATE TABLE `user_information` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_user`	INTEGER NOT NULL,
+	`date`	TEXT NOT NULL,
+	`latitude`	REAL,
+	`longitude`	REAL,
+	`status`	INTEGER NOT NULL,
+	`type`	BOOLEAN NOT NULL
+);
+
+
+INSERT INTO user_information(id_user, date, latitude, longitude, status, type) VALUES (123, "2017-11-05 06:35:40:622", -34.6546599, -58.7262101, 2, 1);
+INSERT INTO user_information(id_user, date, latitude, longitude, status, type) VALUES (123, "2017-11-05 07:35:40:622", -34.6546599, -58.7262101, 2, 1);
+INSERT INTO user_information(id_user, date, latitude, longitude, status, type) VALUES (123, "2017-11-05 09:35:40:622", 00.0000000, 00.0000000, 4, 0);
+
+SELECT * FROM user_information;
+
+
+-------------
+
+CREATE TABLE additional_info (
+ id integer PRIMARY KEY AUTOINCREMENT,
+ id_user_info INTEGER NOT NULL, 	
+ comment TEXT, 
+ active BOOLEAN NOT NULL
+);
+
+
+INSERT INTO user_register(id_user_info, comment, active) VALUES (1, "me fui al baño", 1);
+INSERT INTO user_register(id_user_info, comment, active) VALUES (2, "durmiendo", 1);
+INSERT INTO user_register(id_user_info, comment, active) VALUES (11, "conduciendo", 1);
+INSERT INTO user_register(id_user_info, comment, active) VALUES (11, "conduciendo", 1);
+INSERT INTO user_register(id_user_info, comment, active) VALUES (14, "comiendo", 1);
+INSERT INTO user_register(id_user_info, comment, active) VALUES (14, "desayunando", 1);
+
+
+SELECT * FROM user_register
+
+
+------------
+
+CREATE TABLE user (
+ id integer PRIMARY KEY AUTOINCREMENT,
+ user int NOT NULL,
+ active boolean NOT NULL
+);
+
+INSERT INTO user(user, active) VALUES (1,1);
+INSERT INTO user(user, active) VALUES (2,1);
+INSERT INTO user(user, active) VALUES (3,1);
+
+SELECT * FROM user
+
