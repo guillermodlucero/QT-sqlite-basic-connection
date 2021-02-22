@@ -1,5 +1,5 @@
 
-# Este es un ejemplo de como conectar QT a SQLite
+# Ejemplo de coneccion QT y SQLite
 
 ## Campos tablas
 
